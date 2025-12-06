@@ -1,0 +1,56 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/ubuntu": "^5.2.8",
+    "@kripod/uuidv7": "^0.3.4",
+    "@mantine/core": "^8.3.7",
+    "@mantine/hooks": "^8.3.7",
+    "@tabler/icons-react": "^3.35.0",
+    "@tanstack/react-query": "^5.90.7",
+    "@tanstack/react-virtual": "^3.13.12",
+    "colorthief": "^2.6.0",
+    "polished": "^4.3.1",
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-player": "^3.3.3",
+    "seedrandom": "^3.0.5",
+    "use-query-params": "^2.2.1",
+    "use-sound": "^5.0.0",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@tanstack/react-query-devtools": "^5.90.2",
+    "@types/bun": "^1.3.2",
+    "@types/colorthief": "^2.6.0",
+    "@types/howler": "^2.2.12",
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.2",
+    "@types/seedrandom": "^3.0.8",
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "react-scan": "^0.4.3",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.2"
+  },
+  "trustedDependencies": [
+    "@swc/core",
+    "esbuild",
+    "sharp"
+  ]
+}

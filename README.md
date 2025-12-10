@@ -1,3 +1,3 @@
-# toby's vite template
+# catclash
 
-too lazy
+fun website to rank cats!!

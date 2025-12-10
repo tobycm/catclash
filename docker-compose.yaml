@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: cat_rank_db
+    restart: always
+    environment:
+      POSTGRES_USER: toby
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: catrank
+    ports:
+      - "5432:5432"
+    volumes:
+      # Persist data so it survives restarts
+      - ./data/postgres/:/var/lib/postgresql/data

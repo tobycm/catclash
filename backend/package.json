@@ -9,10 +9,16 @@
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
     "@elysiajs/static": "^1.4.6",
-    "@elysiajs/swagger": "^1.3.1"
+    "@elysiajs/swagger": "^1.3.1",
+    "@google/generative-ai": "^0.24.1",
+    "drizzle-orm": "^0.45.0"
   },
   "devDependencies": {
+    "@types/bun": "^1.3.4",
+    "@types/pg": "^8.15.6",
     "bun-types": "1.3.2",
+    "drizzle-kit": "^0.31.8",
+    "pg": "^8.16.3",
     "sharp": "^0.34.5"
   },
   "module": "src/index.ts"

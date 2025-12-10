@@ -7,13 +7,13 @@ import sharp from "sharp";
 
 // === CONFIGURATION ===
 // UPDATE THIS PATH to where your raw images are!
-const SOURCE_DIR = "/mnt/data/cats_raw";
-const OUTPUT_DIR = "/mnt/data/cats_optimized";
-const TARGET_WIDTH = 800;
+const SOURCE_DIR = "/mnt/data/torrents/cats";
+const OUTPUT_DIR = "/mnt/data/cats";
+const TARGET_WIDTH = 1200;
 const CONCURRENCY = 2; // Low concurrency for E-450 CPU
 // =====================
 
-async function ensureDir(dir: string) {
+async function ensureDir(dir) {
   try {
     await fs.access(dir);
   } catch {
@@ -73,12 +73,18 @@ for (let i = 0; i < validFiles.length; i += CONCURRENCY) {
         }
 
         // 4. Resize and Convert
-        await sharp(path.join(SOURCE_DIR, filename)).resize(TARGET_WIDTH).webp({ quality: 75 }).toFile(outPath);
+        await sharp(path.join(SOURCE_DIR, filename))
+          .resize({
+            width: TARGET_WIDTH,
+            withoutEnlargement: true,
+          })
+          .webp({ quality: 90 })
+          .toFile(outPath);
 
         processedCount++;
         // Simple visual feedback dot
         process.stdout.write(".");
-      } catch (err: any) {
+      } catch (err) {
         errorCount++;
         console.error(`\n[Error] ${filename}: ${err.message}`);
       }
